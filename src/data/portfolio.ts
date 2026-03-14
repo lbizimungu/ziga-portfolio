@@ -1,17 +1,17 @@
 export const profile = {
   name: 'Larissa Bizimungu',
   title: 'Software Engineer · Project Manager',
-  tagline: 'Software, product, and project work with a clean execution style.',
+  tagline: 'Product and project work with a clean execution style.',
   summary:
-    'Hybrid builder focused on health tech, education, operations, and digital strategy.',
+    'Dynamic builder focused on health tech, education, operations, and digital strategy.',
   about:
     'Hey, I am Ziga — a project manager with a software engineering background and a growing love for building things that actually make sense in the real world. I have worked across software development, quality assurance, and Agile delivery, and I am especially drawn to work that sits between structure, creativity, and execution.',
   email: 'b.zigalarissa@gmail.com',
   linkedin: 'https://www.linkedin.com/in/larissa-bizimungu/',
   github: 'https://github.com/ZigaLarissa',
-  cv: 'https://docs.google.com/document/d/1HGfpuk3qxgUDFsSFHU6sYTbC3krXc0W7/edit?usp=sharing&ouid=106587305231885245445&rtpof=true&sd=true',
+  cv: 'https://drive.google.com/file/d/1kU_wZ8rmBE8Mos-tBcmwruHamJzh4wVb/view?usp=sharing',
   location: 'Kigali, Rwanda',
-  photo: '/profile.jpeg',
+  photo: '/src/data/profile.jpeg',
 };
 
 export const navItems = [
@@ -49,55 +49,51 @@ export const tools = [
   { name: 'GitHub', icon: 'github' },
   { name: 'Jira', icon: 'jira' },
   { name: 'SharePoint', icon: 'sharepoint' },
+  { name: 'Google Colab', icon: 'Google Colab' },
   { name: 'Canva', icon: 'canva' },
   { name: 'Pinterest', icon: 'pinterest' },
 ] as const;
 
 export const projects = [
   {
+    title: 'Optimum Communication Agency',
+    subtitle: 'Digital communication strategy and brand client work',
+    tags: ['Brand Strategy', 'Creative Work', 'Client Projects'],
+    theme: 'slate',
+    image: '/src/data/projects/optimum.jpeg',
+  },
+  {
     title: 'EduAssist',
     subtitle: 'Parent-teacher communication and learning support',
     tags: ['Product Design', 'Mobile App', 'EdTech'],
     theme: 'green',
-  },
-  {
-    title: 'eFiche Healthcare + AI Work',
-    subtitle: 'Digital health, documentation, rollout planning, and AI framing',
-    tags: ['HealthTech', 'Project Management', 'AI'],
-    theme: 'gold',
-  },
-  {
-    title: 'Optimum Communication Agency',
-    subtitle: 'Digital communication strategy and brand-facing client work',
-    tags: ['Brand Strategy', 'Creative Work', 'Client Projects'],
-    theme: 'slate',
-  },
-  {
-    title: 'Sawa Telematics Fleet Work',
-    subtitle: 'QA, reporting, planning, and cross-team coordination',
-    tags: ['QA', 'Operations', 'Delivery'],
-    theme: 'olive',
+    image: '/src/data/projects/EduAssist.png',
   },
 ] as const;
 
 export const education = [
   {
-    period: '2021–2025',
+    period: '2022–2025',
     title: 'African Leadership University',
     subtitle: 'BSc (Hons) in Software Engineering',
   },
   {
-    period: 'Machine Learning Track',
-    title: 'Software Engineering Focus',
-    subtitle: 'Built practical interest in AI-supported systems and product thinking',
+    period: 'May–July 2024',
+    title: 'ALX',
+    subtitle: 'Ai Career Essentials Program Certificate',
+  },
+  {
+    period: '2018–2021',
+    title: 'FAWE Girls School',
+    subtitle: 'PCM High School Diploma',
   },
 ] as const;
 
 export const workJourney = [
   {
     period: 'Current',
-    title: 'Project Manager / Hybrid Builder',
-    subtitle: 'Working across project delivery, product thinking, and software-related work',
+    title: 'Project Manager at eFiche',
+    subtitle: 'Working across project delivery, product thinking, and stakeholder liaison for a health tech startup',
   },
   {
     period: 'Current',
@@ -107,7 +103,7 @@ export const workJourney = [
   {
     period: 'Earlier',
     title: 'Sawa Telematics',
-    subtitle: 'Quality assurance, reporting, coordination, and execution discipline',
+    subtitle: 'Quality assurance, reporting, coordination, and product delivery at a fleet management company',
   },
 ] as const;
 

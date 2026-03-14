@@ -83,7 +83,6 @@ textarea {
   position: sticky;
   top: 12px;
   z-index: 10;
-  margin-top: 12px;
   padding: 14px 18px;
   display: flex;
   align-items: center;
@@ -158,7 +157,7 @@ textarea {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.6fr);
   align-items: center;
   gap: 32px;
   min-height: calc(100vh - 130px);
@@ -380,16 +379,21 @@ textarea {
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 0.2fr));
+  row-gap: 46px;
+  justify-content: center;
 }
 
 .tool-card {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tool-shell {
-  min-height: 188px;
+  min-height: 160px;
+  width: 160px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface-2);
@@ -439,19 +443,19 @@ textarea {
 }
 
 .project-visual.green {
-  background: linear-gradient(145deg, #e6eee7, #cfdccc);
+  background: linear-gradient(145deg, #82e98e, #cfdccc);
 }
 
 .project-visual.gold {
-  background: linear-gradient(145deg, #f2ead8, #e9dec2);
+  background: linear-gradient(145deg, #ecc978, #e9dec2);
 }
 
 .project-visual.slate {
-  background: linear-gradient(145deg, #e5e8eb, #d5dde3);
+  background: linear-gradient(145deg, #7eb7f0, #d5dde3);
 }
 
 .project-visual.olive {
-  background: linear-gradient(145deg, #dce5dd, #c8d3c8);
+  background: linear-gradient(145deg, #68de76, #c8d3c8);
 }
 
 .project-ui-card {
@@ -461,7 +465,21 @@ textarea {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-.project-ui-card.large {
+.project-visual {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+
+.project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .project-ui-card.large {
   inset: 20px 44% 20px 20px;
 }
 
@@ -469,7 +487,7 @@ textarea {
   top: 28px;
   right: 20px;
   width: 34%;
-  height: 38%;
+  height: 30%;
 }
 
 .project-ui-card.small.bottom {
@@ -484,7 +502,7 @@ textarea {
   left: 40%;
   width: 42%;
   height: 16%;
-}
+} */
 
 .project-body {
   padding: 18px 8px 8px;
@@ -665,6 +683,7 @@ textarea {
   padding: 14px 14px;
   outline: none;
 }
+
 
 .form-grid input::placeholder,
 .form-grid textarea::placeholder {

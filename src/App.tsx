@@ -46,8 +46,10 @@ function ToolIcon({ name }: { name: string }) {
       return <FolderKanban size={28} className={className} />;
     case 'sharepoint':
       return <Share2 size={28} className={className} />;
+    case 'Google Colab':
+      return <MonitorCog size={28} className={className} />;
     case 'canva':
-      return <Brush size={28} className={className} />;
+      return <Palette size={28} className={className} />;
     case 'pinterest':
       return <Pin size={28} className={className} />;
     default:
@@ -268,10 +270,7 @@ function App() {
                 transition={{ duration: 0.4, delay: index * 0.06 }}
               >
                 <div className={`project-visual ${project.theme}`}>
-                  <div className="project-ui-card large" />
-                  <div className="project-ui-card small top" />
-                  <div className="project-ui-card small bottom" />
-                  <div className="project-ui-card strip" />
+                  <img src={project.image} alt={project.title} />
                 </div>
 
                 <div className="project-body">
@@ -413,7 +412,7 @@ function App() {
 
                 <label>
                   <span>Country *</span>
-                  <input type="text" placeholder="Select Country" />
+                  <input type="text" placeholder="Enter Country" />
                 </label>
 
                 <label className="full">
