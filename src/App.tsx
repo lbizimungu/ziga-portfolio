@@ -368,26 +368,29 @@ function App() {
               </div>
             </div>
 
-            <form className="contact-form">
+            <form className="contact-form"
+              action="https://formspree.io/f/xqeyljlv"
+              method="POST"
+            >
               <div className="form-grid">
                 <label>
                   <span>Your Name *</span>
-                  <input type="text" placeholder="Ex. John Doe" />
+                  <input name="name" type="text" placeholder="Ex. John Doe" />
                 </label>
 
                 <label>
                   <span>Email *</span>
-                  <input type="email" placeholder="example@gmail.com" />
+                  <input name="email" type="email" placeholder="example@gmail.com" />
                 </label>
 
                 <label>
                   <span>Phone *</span>
-                  <input type="text" placeholder="Enter Phone Number" />
+                  <input name="phone" type="text" placeholder="Enter Phone Number" />
                 </label>
 
                 <label>
                   <span>I’m Interested in *</span>
-                  <select defaultValue="">
+                  <select name="interest" defaultValue="">
                     <option value="" disabled>
                       Select
                     </option>
@@ -412,12 +415,12 @@ function App() {
 
                 <label>
                   <span>Country *</span>
-                  <input type="text" placeholder="Enter Country" />
+                  <input name="country" type="text" placeholder="Enter Country" />
                 </label>
 
                 <label className="full">
                   <span>Your Message *</span>
-                  <textarea rows={6} placeholder="Enter here.." />
+                  <textarea name="message" rows={6} placeholder="Enter here.." />
                 </label>
               </div>
 
