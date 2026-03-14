@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 export const profile = {
   name: 'Larissa Bizimungu',
   title: 'Software Engineer · Project Manager',
@@ -11,7 +13,7 @@ export const profile = {
   github: 'https://github.com/ZigaLarissa',
   cv: 'https://drive.google.com/file/d/1kU_wZ8rmBE8Mos-tBcmwruHamJzh4wVb/view?usp=sharing',
   location: 'Kigali, Rwanda',
-  photo: '/src/data/profile.jpeg',
+  photo: `${base}profile.jpeg`,
 };
 
 export const navItems = [
@@ -60,14 +62,14 @@ export const projects = [
     subtitle: 'Digital communication strategy and brand client work',
     tags: ['Brand Strategy', 'Creative Work', 'Client Projects'],
     theme: 'slate',
-    image: '/src/data/projects/optimum.jpeg',
+    image: `${base}projects/optimum.jpeg`,
   },
   {
     title: 'EduAssist',
     subtitle: 'Parent-teacher communication and learning support',
     tags: ['Product Design', 'Mobile App', 'EdTech'],
     theme: 'green',
-    image: '/src/data/projects/EduAssist.png',
+    image: `${base}projects/EduAssist.png`,
   },
 ] as const;
 
