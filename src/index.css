@@ -114,7 +114,6 @@ textarea {
   color: var(--muted);
 }
 
-.header-actions,
 .header-actions nav,
 .cta-row,
 .pill-row,
@@ -126,6 +125,8 @@ textarea {
 }
 
 .header-actions {
+  display: flex;
+  gap: 10px;
   align-items: center;
 }
 
@@ -145,6 +146,23 @@ textarea {
 .tool-card:hover,
 .button:hover {
   transform: translateY(-2px);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  place-items: center;
 }
 
 .container {
@@ -765,26 +783,74 @@ textarea {
 }
 
 @media (max-width: 720px) {
-  .site-header {
-    position: static;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-actions {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .header-actions nav {
-    gap: 8px 12px;
-  }
-
   .site-header,
   .container,
   .site-footer {
     width: min(100%, calc(100% - 32px));
+  }
+
+  .site-header {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .site-header > div:first-child {
+    min-width: 0;
+  }
+
+  .brand-role {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .header-actions {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: grid;
+  }
+
+  .header-actions nav {
+    display: none;
+  }
+
+  .header-actions nav.open {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--surface) 96%, transparent);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+  }
+
+  .header-actions nav.open a {
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .site-header {
+    position: relative;
   }
 
   .hero h1,

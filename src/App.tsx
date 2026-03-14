@@ -17,6 +17,8 @@ import {
   Pin,
   Presentation,
   Share2,
+  X,
+  Menu,
 } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 import {
@@ -75,6 +77,7 @@ function ContactIcon({ label }: { label: string }) {
 }
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const savedTheme = window.localStorage.getItem('portfolio-theme');
     return savedTheme === 'light' ? 'light' : 'dark';
@@ -94,17 +97,34 @@ function App() {
         </div>
 
         <div className="header-actions">
-          <nav>
+          <nav className={mobileMenuOpen ? 'open' : ''}>
             {navItems.map(([label, href]) => (
-              <a key={label} href={href}>
+              <a
+                key={label}
+                href={href}
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 {label}
               </a>
             ))}
           </nav>
-          <ThemeToggle
-            theme={theme}
-            onToggle={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))}
-          />
+
+          <div className="header-controls">
+            <ThemeToggle
+              theme={theme}
+              onToggle={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))}
+            />
+
+            <button
+              type="button"
+              className="menu-toggle"
+              aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+            >
+              {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
+          </div>
         </div>
       </header>
 
