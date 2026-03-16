@@ -99,12 +99,12 @@ export const workJourney = [
   },
   {
     period: 'Current',
-    title: 'Optimum Communication Agency',
+    title: 'Co-founder at Optimum Communication Agency',
     subtitle: 'Co-building a communication venture with active client outreach',
   },
   {
     period: 'Earlier',
-    title: 'Sawa Telematics',
+    title: 'Quality Assurance at Sawa Telematics',
     subtitle: 'Quality assurance, reporting, coordination, and product delivery at a fleet management company',
   },
 ] as const;
