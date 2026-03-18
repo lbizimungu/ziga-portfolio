@@ -32,6 +32,7 @@ import {
   strengths,
   tools,
   workJourney,
+  base,
 } from './data/portfolio';
 
 function ToolIcon({ name }: { name: string }) {
@@ -86,6 +87,11 @@ function App() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     window.localStorage.setItem('portfolio-theme', theme);
+
+    const favicon = document.getElementById('favicon') as HTMLLinkElement | null;
+    if (favicon) {
+      favicon.href = `${base}${theme === 'dark' ? 'favicon-dark.png' : 'favicon-light.png'}`;
+    }
   }, [theme]);
 
   return (

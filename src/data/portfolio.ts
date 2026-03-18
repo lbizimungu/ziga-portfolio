@@ -1,4 +1,4 @@
-const base = import.meta.env.BASE_URL;
+export const base = import.meta.env.BASE_URL;
 
 export const profile = {
   name: 'Larissa Bizimungu',
@@ -65,12 +65,20 @@ export const projects = [
     image: `${base}projects/optimum.jpeg`,
   },
   {
-    title: 'EduAssist',
+    title: 'EduAssist Mobile App',
     subtitle: 'Parent-teacher communication and learning support',
     tags: ['Product Design', 'Mobile App', 'EdTech'],
     theme: 'green',
     image: `${base}projects/EduAssist.png`,
   },
+  {
+    title: 'Loving Heart Foundation Website',
+    subtitle: 'Website development for a local non-profit organization',
+    tags: ['Product Design', 'Web Development', 'Non-Profit'],
+    theme: 'green',
+    image: `${base}projects/lhf.png`,
+  },
+
 ] as const;
 
 export const education = [
