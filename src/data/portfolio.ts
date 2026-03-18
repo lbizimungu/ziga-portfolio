@@ -78,6 +78,13 @@ export const projects = [
     theme: 'green',
     image: `${base}projects/lhf.png`,
   },
+  {
+    title: 'Safe Send Web App',
+    subtitle: 'A web application for secure package delivery and tracking',
+    tags: ['Web Development', 'Logistics', 'User Experience'],
+    theme: 'green',
+    image: `${base}projects/safesend.png`,
+  },
 
 ] as const;
 
