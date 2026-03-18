@@ -63,6 +63,7 @@ export const projects = [
     tags: ['Brand Strategy', 'Creative Work', 'Client Projects'],
     theme: 'slate',
     image: `${base}projects/optimum.jpeg`,
+    link: 'https://lbizimungu.github.io/ziga-portfolio/',
   },
   {
     title: 'EduAssist Mobile App',
@@ -70,6 +71,7 @@ export const projects = [
     tags: ['Product Design', 'Mobile App', 'EdTech'],
     theme: 'green',
     image: `${base}projects/EduAssist.png`,
+    link: 'https://drive.google.com/file/d/1hnUoErln-r4ZdHYejdy0tkzt3vkJkl_W/view?usp=sharing',
   },
   {
     title: 'Loving Heart Foundation Website',
@@ -77,6 +79,7 @@ export const projects = [
     tags: ['Product Design', 'Web Development', 'Non-Profit'],
     theme: 'green',
     image: `${base}projects/lhf.png`,
+    link: 'https://loving-heart-foundation.vercel.app/',
   },
   {
     title: 'Safe Send Web App',
@@ -84,6 +87,7 @@ export const projects = [
     tags: ['Web Development', 'Logistics', 'User Experience'],
     theme: 'green',
     image: `${base}projects/safesend.png`,
+    link: 'https://safe-send-blue.vercel.app/',
   },
 
 ] as const;

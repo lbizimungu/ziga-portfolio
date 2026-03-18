@@ -290,6 +290,8 @@ function App() {
               <motion.article
                 key={project.title}
                 className="project-card"
+                onClick={() => window.open(project.link, '_blank')}
+                style={{ cursor: 'pointer' }}
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.18 }}
@@ -311,9 +313,16 @@ function App() {
                       <h3>{project.title}</h3>
                       <p>{project.subtitle}</p>
                     </div>
-                    <button className="project-arrow" type="button" aria-label={project.title}>
-                      <ArrowRight size={16} />
-                    </button>
+                      <button
+                        className="project-arrow"
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.link, '_blank');
+                        }}
+                      >
+                        <ArrowUpRight size={16} />
+                      </button>
                   </div>
                 </div>
               </motion.article>
